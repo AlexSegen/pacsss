@@ -19,4 +19,7 @@ html {
  .intro {
      max-width: 600px;
      margin: 200px auto;
+     p:last-child {
+        font-size: 12px;
+     }
  }
