@@ -6,18 +6,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel=icon type=image/png sizes=32x32 href=./assets/img/favicon-32x32.png>
+  <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
   <title>Pixelagil CSS Scaffolding</title>
 </head>
 
 <body>
 
-  <div class="intro text-center">
-    <img src="./assets/img/logo-pixelagil.png" class="img-fluid center-block mb-10" alt="Pixelagil">
-    <h1>PACSSS: Pixelagil CSS Scaffolding</h1>
-    <p>You are seeing this thanks to <a href="https://parceljs.org/" target="_blank">Parcel bundler</a>.</p>
-    <p>My website: <a href="https://www.pixelagil.com/" target="_blank">Pixelagil.com</a></p>
+  <div id="app">
+    <div id="header"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+            <div class="card card-body bg-light shadow-sm border-0 p-5">
+              <form id="myForm">
+                <div class="--fields">
+                    <input type="hidden" name="id" id="userId">
+                    <div class="form-group row">
+                      <div class="col-sm-4">
+                          <label class="text-muted small">Full name</label>
+                      </div>
+                      <div class="col-sm-8">
+                          <input class="form-control" type="text" name="name" placeholder="Full name" id="name"/>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-4">
+                          <label class="text-muted small">Email</label>
+                      </div>
+                      <div class="col-sm-8">
+                          <input class="form-control" type="email" name="email" placeholder="Email" id="email"/>                        
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label class="text-muted small">Phone</label>
+                        </div>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="phone" placeholder="Phone" id="phone"/>                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label class="text-muted small">City</label>
+                        </div>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" name="city" placeholder="City" id="city"/>                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label class="text-muted small">Company</label>
+                        </div>
+                        <div class="col-sm-8">
+                              <input class="form-control" type="text" name="company" placeholder="Company" id="company"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="isActive" name="isActive">
+                        <label class="form-check-label" for="isActive">
+                          Is Active
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group m-0">
+                      <button class="btn btn-primary" type="submit" data-action="set">
+                          <i class="icon ion-md-save"></i> Save info</button>
+                      <button class="btn btn-light --btn-action" data-action="reset" style="display: none!important;">Reset</button>
+                    </div>
+                </div>
+              </form>
+            </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="d-flex align-items-center" data-loading style="display: none!important;">
+            <strong>Loading...</strong>
+            <div class="spinner-border ml-auto text-light" role="status" aria-hidden="true"></div>
+          </div>
+          <ul class="list-group border-0 rounded-0" id="userList">
+            <li class="list-group-item  align-items-center border-0">
+              No users registered yet.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-
   <script src="./assets/js/index.js"></script>
 </body>
 

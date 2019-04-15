@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 5,
+      "name": "Gage Brehaut",
+      "email": "gbrehaut4@dot.gov",
+      "phone": "617-258-1050",
+      "city": "Dongxing",
+      "company": "Gigaclub",
+      "isActive": true
+    },
+    {
+      "id": 6,
+      "name": "Mignon Casperri",
+      "email": "mcasperri5@umn.edu",
+      "phone": "788-508-4973",
+      "city": "Néa Sánta",
+      "company": "Meetz",
+      "isActive": false
+    },
+    {
+      "id": 7,
+      "name": "Emogene O'Sharry",
+      "email": "eosharry6@mediafire.com",
+      "phone": "759-266-8641",
+      "city": "Sumurwaru",
+      "company": "Shuffletag",
+      "isActive": true
+    },
+    {
+      "id": 10,
+      "name": "Charmain Fowley",
+      "email": "cfowley9@w3.org",
+      "phone": "264-379-2931",
+      "city": "Houmen",
+      "company": "Buzzshare",
+      "isActive": true
+    }
+  ]
+}
