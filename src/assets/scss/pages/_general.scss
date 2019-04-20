@@ -23,3 +23,34 @@ html {
         font-size: 12px;
      }
  }
+
+ .demo-icons {
+   position: relative;
+
+   .glyph {
+     width: 33.33%;
+     float: left;
+     margin-bottom: 10px;
+     @media(max-width: 768px) {
+       width: 50%;
+     }
+     @media(max-width: 420px) {
+      width: 100%;
+    }
+   }
+   .unit.size1of2 {
+     padding: 5px;
+     border: 1px solid #ddd;
+     font-size: 12px;
+     opacity: .5;
+     display: none;
+   }
+
+   .liga,
+   .fgc1,
+   .hidden-true,
+   .unitRight  {
+     display: none;
+   }
+
+ }
