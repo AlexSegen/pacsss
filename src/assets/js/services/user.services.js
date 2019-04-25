@@ -1,7 +1,7 @@
-const Api = require("../api");
-const toastme = require('toastmejs');
-const serialize = require('form-serialize');
-const User = require('../models/user.model');
+import Api  from "../api";
+import utils from '../helpers/utils';
+import toastme from 'toastmejs';
+import User  from '../models/user.model';
 
 const RESOURCE_NAME = '/users';
 const myForm = document.getElementById('myForm');
@@ -41,11 +41,13 @@ const setUser = payload => {
 
   document.querySelectorAll('[data-action="set"]')[0].setAttribute("disabled", true);
   document.querySelectorAll('[data-action="set"]')[0].innerHTML =`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`;
-  user = new User(payload.id, payload.name, payload.email, payload.phone, payload.city, payload.company, payload.isActive == 'on' ? true : false);
+  user = new User(payload.id, payload.name, payload.email, payload.phone, payload.city, payload.company, payload.isActive);
 
-  if (payload.id > 0) {
+  if (payload.id != 0) {
+    user.updatedAt = new Date();
     Api.update(RESOURCE_NAME, payload.id, user).then(data => {
       users.splice(users.findIndex(find => find.id == payload.id), 1, data);
+      data.updatedAt ? document.querySelectorAll('.--updatedAt')[0].innerHTML = `Updated at <br> ${utils.formatDate(data.updatedAt)}` : document.querySelectorAll('.--updatedAt')[0].innerHTML = '';
       listUsers(users);
       toastme.info('User updated!');
     }).finally(()=> {
@@ -75,13 +77,14 @@ const getUser = (userId) => {
   document.getElementById('phone').value = tmp.phone;
   document.getElementById('city').value = tmp.city;
   document.getElementById('company').value = tmp.company;
+  document.getElementById('isActive').checked = tmp.isActive;
   document.querySelectorAll('[data-action="reset"]')[0].removeAttribute("style");
-  tmp.isActive ? document.getElementById('isActive').setAttribute('checked', true) : document.getElementById('isActive').removeAttribute('checked');
+  tmp.updatedAt ? document.querySelectorAll('.--updatedAt')[0].innerHTML = `Updated<br> ${utils.formatDate(tmp.updatedAt)}` : document.querySelectorAll('.--updatedAt')[0].innerHTML = '';
 }
 
 
 const removeUser = userId => {
-  Api.delete(RESOURCE_NAME, userId).then(() => {
+  Api.remove(RESOURCE_NAME, userId).then(() => {
     users.splice(users.findIndex(find => find.id == userId), 1);
     listUsers(users);
     toastme.warning('User deleted')
@@ -105,7 +108,7 @@ const handleSubmit = user => {
 const resetForm = () => {
   myForm.reset();
   user = new User();
-  document.querySelectorAll('[data-reset]')[0].setAttribute("style", "display:none!important");
+  document.querySelectorAll('[data-action="reset"]')[0].setAttribute("style", "display:none!important");
 }
 
 //ACTIONS
@@ -130,9 +133,16 @@ document.addEventListener('click', (e) => {
 
 myForm.addEventListener('submit', function (e) {
   e.preventDefault();
-  handleSubmit(serialize(myForm, {
-    hash: true
-  }));
+
+  let obj = {};
+
+  myForm.querySelectorAll('.form-control').forEach((key, value) => {
+    obj[key.name] = key.value
+  });
+  
+  obj.isActive = document.getElementById('isActive').checked == true ? true : false;
+  
+  handleSubmit(obj);
 });
 
 getUsers();

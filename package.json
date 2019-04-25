@@ -18,10 +18,16 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-proto-to-assign": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "dotenv": "^7.0.0",
     "form-serialize": "^0.7.2",
+    "moment": "^2.24.0",
     "toastmejs": "0.0.6"
   }
 }

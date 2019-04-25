@@ -2,21 +2,14 @@
   "users": [
     {
       "id": 5,
-      "name": "Gage Brehaut",
-      "email": "gbrehaut4@dot.gov",
-      "phone": "617-258-1050",
-      "city": "Dongxing",
-      "company": "Gigaclub",
-      "isActive": true
-    },
-    {
-      "id": 6,
-      "name": "Mignon Casperri",
-      "email": "mcasperri5@umn.edu",
-      "phone": "788-508-4973",
-      "city": "Néa Sánta",
-      "company": "Meetz",
-      "isActive": false
+      "name": "Daniel Cervantez",
+      "email": "dani@mail.com",
+      "phone": "935741415",
+      "city": "Quillin",
+      "company": "Mailto Jacks",
+      "isActive": true,
+      "createdAt": "2019-04-25T19:46:05.393Z",
+      "updatedAt": "2019-04-25T19:46:05.393Z"
     },
     {
       "id": 7,
@@ -25,16 +18,42 @@
       "phone": "759-266-8641",
       "city": "Sumurwaru",
       "company": "Shuffletag",
-      "isActive": true
+      "isActive": true,
+      "createdAt": "2019-04-15T22:17:39.645Z",
+      "updatedAt": "2019-04-15T22:17:39.645Z"
     },
     {
       "id": 10,
-      "name": "Charmain Fowley",
+      "name": "Charmain Fowleyz",
       "email": "cfowley9@w3.org",
       "phone": "264-379-2931",
       "city": "Houmen",
       "company": "Buzzshare",
-      "isActive": true
+      "isActive": false,
+      "createdAt": "2019-04-25T20:59:26.566Z",
+      "updatedAt": "2019-04-25T20:59:26.566Z"
+    },
+    {
+      "id": 12,
+      "name": "Jose Mariño",
+      "email": "ajvivas86@gmail.com",
+      "phone": "935737207",
+      "city": "Santiago",
+      "company": "",
+      "isActive": true,
+      "createdAt": "2019-04-25T20:59:20.046Z",
+      "updatedAt": "2019-04-25T20:59:20.046Z"
+    },
+    {
+      "id": 15,
+      "name": "Charmain Fowleyz",
+      "email": "cfowley9@w3.org",
+      "phone": "264-379-2931",
+      "city": "Houmen",
+      "company": "Buzzshare",
+      "isActive": true,
+      "createdAt": "2019-04-25T20:59:22.573Z",
+      "updatedAt": "2019-04-25T20:59:22.573Z"
     }
   ]
 }

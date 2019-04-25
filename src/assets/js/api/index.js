@@ -10,8 +10,62 @@ class RequestError extends Error {
   }
 }
 
-class ApiClass {
-  //constructor() {}
+const Api = {
+  getAll: async (resource) => {
+    try {
+      const response = await $http.get(resource);
+      return response.data;
+    } catch (e) {
+        toastme.error(e.message);
+      throw new RequestError(e.response.status, e.message);
+    }
+  },
+
+  getOne: async (resource, identifier)  => {
+    try {
+      const response = await $http.get(`${resource}/${identifier}`);
+
+      return response.data;
+    } catch (e) {
+        toastme.error(e.message);
+      throw new RequestError(e.response.status, e.message);
+    }
+  },
+
+  create: async (resource, payload) => {
+    try {
+      const response = await $http.post(resource, payload);
+      return response.data;
+    } catch (e) {
+        toastme.error(e.message);
+      throw new RequestError(e.response.status, e.message);
+    }
+  },
+
+  update: async (resource, identifier, payload) => {
+    try {
+      const response = await $http.put(`${resource}/${identifier}`, payload);
+      return response.data;
+    } catch (e) {
+        toastme.error(e.message);
+      throw new RequestError(e.response.status, e.message);
+    }
+  },
+
+  remove: async (resource, identifier) => {
+    try {
+      const response = await $http.delete(`${resource}/${identifier}`);
+      return response.data;
+    } catch (e) {
+        toastme.error(e.message);
+      throw new RequestError(e.response.status, e.message);
+    }
+  }
+
+}
+
+
+/* class ApiClass {
   async getAll(resource) {
     try {
       const response = await $http.get(resource);
@@ -49,7 +103,7 @@ class ApiClass {
       throw new RequestError(e.response.status, e.message);
     }
   }
-  async delete(resource, identifier) {
+  async remove(resource, identifier) {
     try {
       const response = await $http.delete(`${resource}/${identifier}`);
       return response.data;
@@ -60,6 +114,6 @@ class ApiClass {
   }
 }
 
-const Api = new ApiClass();
+const Api = new ApiClass(); */
 
 module.exports = Api;
