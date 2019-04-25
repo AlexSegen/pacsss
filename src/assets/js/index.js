@@ -2,7 +2,7 @@ import "babel-polyfill";
 import 'toastmejs/dist/css/toastme.css'
 import '../scss/app.scss'
 
-import './services/user.services'
+import './controllers/user.controller'
 
 const setPageHeader = (title, description, identifier) => {
     document.getElementById(identifier).innerHTML = "";
