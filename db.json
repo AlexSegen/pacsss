@@ -35,14 +35,14 @@
     },
     {
       "id": 12,
-      "name": "Jose Mariño 2",
+      "name": "Jose Mariño",
       "email": "ajvivas86@gmail.com",
       "phone": "935737207",
       "city": "Santiago",
       "company": "",
       "isActive": true,
-      "createdAt": "2019-04-25T21:12:35.751Z",
-      "updatedAt": "2019-04-25T21:12:35.751Z"
+      "createdAt": "2019-04-25T21:31:48.673Z",
+      "updatedAt": "2019-04-25T21:31:48.673Z"
     },
     {
       "id": 15,
@@ -57,13 +57,13 @@
     },
     {
       "id": 16,
-      "name": "Alejandro Vivas",
-      "email": "ajvivas86@gmail.com",
-      "phone": "935737207",
-      "city": "Santiago",
-      "company": "Buzzshare",
-      "isActive": true,
-      "createdAt": "2019-04-25T21:18:07.935Z",
+      "name": "test",
+      "email": "test@mail.com",
+      "phone": "",
+      "city": "",
+      "company": "",
+      "isActive": false,
+      "createdAt": "2019-04-25T21:26:42.720Z",
       "updatedAt": null
     }
   ]

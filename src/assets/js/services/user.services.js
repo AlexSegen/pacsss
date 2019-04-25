@@ -121,6 +121,11 @@ const handleSubmit = user => {
     return false
   }
 
+  if(!utils.validateEmail(user.email)) {
+    toastme.error('Email is not valid');
+    return false
+  }
+
   setUser(user)
 }
 
@@ -140,7 +145,18 @@ document.addEventListener('click', (e) => {
         getUser(identifier);
         break;
       case 'delete':
-        removeUser(identifier);
+      toastme.yesNoDialog({ 
+        title: "Warning!",
+        text: "Do you want to delete this user?",
+        textConfirm: "Confirm",
+        textCancel: "Cancel",
+        showCancel: true, // true or false
+        //type: "danger"  // 'success', 'danger', 'warning', 'info' or 'question' 
+        }).then((value) =>  { 
+          if (value) {
+            removeUser(identifier);
+          }
+        });
         break;
         case 'reset':
         resetForm();

@@ -28,6 +28,6 @@
     "dotenv": "^7.0.0",
     "form-serialize": "^0.7.2",
     "moment": "^2.24.0",
-    "toastmejs": "0.0.6"
+    "toastmejs": "^0.1.1"
   }
 }
