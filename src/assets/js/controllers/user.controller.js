@@ -75,18 +75,14 @@ const setUser = payload => {
 
 const getUser = userId => {
   let tmp = users.find(user => user.id == userId);
-  document.getElementById('userId').value = tmp.id;
-  document.getElementById('name').value = tmp.name;
-  document.getElementById('email').value = tmp.email;
-  document.getElementById('phone').value = tmp.phone;
-  document.getElementById('city').value = tmp.city;
-  document.getElementById('company').value = tmp.company;
-  document.getElementById('isActive').checked = tmp.isActive;
-  document.querySelectorAll('[data-action="reset"]')[0].removeAttribute("style");
-  tmp.updatedAt ? document.querySelectorAll('.--updatedAt')[0].innerHTML = `Updated<br> ${utils.formatDate(tmp.updatedAt)}` : document.querySelectorAll('.--updatedAt')[0].innerHTML = '';
   
+  for (let [key, value] of Object.entries(tmp)) {
+    document.getElementById(key) ? document.getElementById(key).value = value : false;
+  }
+  document.getElementById('isActive').checked = tmp.isActive;
+  tmp.updatedAt ? document.querySelectorAll('.--updatedAt')[0].innerHTML = `Updated<br> ${utils.formatDate(tmp.updatedAt)}` : document.querySelectorAll('.--updatedAt')[0].innerHTML = '';
+  document.querySelectorAll('[data-action="reset"]')[0].removeAttribute("style");
   editMode(true);
-
 }
 
 const editMode = param => {
