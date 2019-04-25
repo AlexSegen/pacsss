@@ -74,14 +74,22 @@ const setUser = payload => {
 
 
 const getUser = userId => {
-  let tmp = users.find(user => user.id == userId);
   
+  let tmp = users.find(user => user.id == userId);
+
   for (let [key, value] of Object.entries(tmp)) {
+    if(key ==  'isActive') {
+      document.getElementById('isActive').checked = tmp.isActive;
+    }
+    if(key ==  'id') {
+      document.getElementById('userId').value = tmp.id;
+    }
     document.getElementById(key) ? document.getElementById(key).value = value : false;
   }
-  document.getElementById('isActive').checked = tmp.isActive;
+  
   tmp.updatedAt ? document.querySelectorAll('.--updatedAt')[0].innerHTML = `Updated<br> ${utils.formatDate(tmp.updatedAt)}` : document.querySelectorAll('.--updatedAt')[0].innerHTML = '';
   document.querySelectorAll('[data-action="reset"]')[0].removeAttribute("style");
+  
   editMode(true);
 }
 

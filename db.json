@@ -62,9 +62,9 @@
       "phone": "",
       "city": "",
       "company": "",
-      "isActive": false,
-      "createdAt": "2019-04-25T21:26:42.720Z",
-      "updatedAt": null
+      "isActive": true,
+      "createdAt": "2019-04-25T22:32:52.236Z",
+      "updatedAt": "2019-04-25T22:32:52.236Z"
     }
   ]
 }
