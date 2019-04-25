@@ -47,31 +47,35 @@ const setUser = payload => {
     user.updatedAt = new Date();
     Api.update(RESOURCE_NAME, payload.id, user).then(data => {
       users.splice(users.findIndex(find => find.id == payload.id), 1, data);
-      data.updatedAt ? document.querySelectorAll('.--updatedAt')[0].innerHTML = `Updated at <br> ${utils.formatDate(data.updatedAt)}` : document.querySelectorAll('.--updatedAt')[0].innerHTML = '';
+      data.updatedAt ? document.querySelectorAll('.--updatedAt')[0].innerHTML = `Updated <br> ${utils.formatDate(data.updatedAt)}` : document.querySelectorAll('.--updatedAt')[0].innerHTML = '';
       listUsers(users);
       toastme.info('User updated!');
+      editMode(false);
     }).finally(()=> {
       document.querySelectorAll('[data-action="set"]')[0].removeAttribute("disabled");
       document.querySelectorAll('[data-action="set"]')[0].innerHTML =`<i class="icon ion-md-save"></i> Save info`;
+      editMode(false);
     })
   } else {
     Api.create(RESOURCE_NAME, user).then(data => {
       users.push(data);
       listUsers(users);
+      editMode(false);
       myForm.reset();
       user = new User();
       toastme.success('New user added!');
     }).finally(()=> {
       document.querySelectorAll('[data-action="set"]')[0].removeAttribute("disabled");
       document.querySelectorAll('[data-action="set"]')[0].innerHTML =`<i class="icon ion-md-save"></i> Save info`;
+      editMode(false);
     })
   }
 }
 
 
-const getUser = (userId) => {
+const getUser = userId => {
   let tmp = users.find(user => user.id == userId);
-  document.getElementById('userId').value = userId;
+  document.getElementById('userId').value = tmp.id;
   document.getElementById('name').value = tmp.name;
   document.getElementById('email').value = tmp.email;
   document.getElementById('phone').value = tmp.phone;
@@ -80,6 +84,21 @@ const getUser = (userId) => {
   document.getElementById('isActive').checked = tmp.isActive;
   document.querySelectorAll('[data-action="reset"]')[0].removeAttribute("style");
   tmp.updatedAt ? document.querySelectorAll('.--updatedAt')[0].innerHTML = `Updated<br> ${utils.formatDate(tmp.updatedAt)}` : document.querySelectorAll('.--updatedAt')[0].innerHTML = '';
+  
+  editMode(true);
+
+}
+
+const editMode = param => {
+  if(param) {
+    userList.querySelectorAll('[data-action="delete"]').forEach(item => {
+      item.setAttribute('disabled', 'disabled');
+    });
+  } else {
+    userList.querySelectorAll('[data-action="delete"]').forEach(item => {
+      item.removeAttribute('disabled');
+    });
+  }
 }
 
 
@@ -109,6 +128,7 @@ const resetForm = () => {
   myForm.reset();
   user = new User();
   document.querySelectorAll('[data-action="reset"]')[0].setAttribute("style", "display:none!important");
+  editMode(false);
 }
 
 //ACTIONS

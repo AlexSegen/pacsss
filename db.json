@@ -8,8 +8,8 @@
       "city": "Quillin",
       "company": "Mailto Jacks",
       "isActive": true,
-      "createdAt": "2019-04-25T19:46:05.393Z",
-      "updatedAt": "2019-04-25T19:46:05.393Z"
+      "createdAt": "2019-04-25T21:19:30.968Z",
+      "updatedAt": "2019-04-25T21:19:30.968Z"
     },
     {
       "id": 7,
@@ -29,20 +29,20 @@
       "phone": "264-379-2931",
       "city": "Houmen",
       "company": "Buzzshare",
-      "isActive": false,
-      "createdAt": "2019-04-25T20:59:26.566Z",
-      "updatedAt": "2019-04-25T20:59:26.566Z"
+      "isActive": true,
+      "createdAt": "2019-04-25T21:19:48.815Z",
+      "updatedAt": "2019-04-25T21:19:48.815Z"
     },
     {
       "id": 12,
-      "name": "Jose Mariño",
+      "name": "Jose Mariño 2",
       "email": "ajvivas86@gmail.com",
       "phone": "935737207",
       "city": "Santiago",
       "company": "",
       "isActive": true,
-      "createdAt": "2019-04-25T20:59:20.046Z",
-      "updatedAt": "2019-04-25T20:59:20.046Z"
+      "createdAt": "2019-04-25T21:12:35.751Z",
+      "updatedAt": "2019-04-25T21:12:35.751Z"
     },
     {
       "id": 15,
@@ -54,6 +54,17 @@
       "isActive": true,
       "createdAt": "2019-04-25T20:59:22.573Z",
       "updatedAt": "2019-04-25T20:59:22.573Z"
+    },
+    {
+      "id": 16,
+      "name": "Alejandro Vivas",
+      "email": "ajvivas86@gmail.com",
+      "phone": "935737207",
+      "city": "Santiago",
+      "company": "Buzzshare",
+      "isActive": true,
+      "createdAt": "2019-04-25T21:18:07.935Z",
+      "updatedAt": null
     }
   ]
 }
