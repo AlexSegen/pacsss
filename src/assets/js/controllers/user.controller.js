@@ -136,6 +136,7 @@ const handleSubmit = user => {
 const resetForm = () => {
   myForm.reset();
   user = new User();
+  document.querySelectorAll('.--updatedAt')[0].innerHTML = ''
   document.querySelectorAll('[data-action="reset"]')[0].setAttribute("style", "display:none!important");
   editMode(false);
 }
@@ -176,8 +177,8 @@ myForm.addEventListener('submit', function (e) {
 
   let obj = {};
 
-  myForm.querySelectorAll('.form-control').forEach((key, value) => {
-    obj[key.name] = key.value
+  myForm.querySelectorAll('.form-control').forEach(item => {
+    obj[item.name] = item.value
   });
   
   obj.isActive = document.getElementById('isActive').checked == true ? true : false;

@@ -30,8 +30,8 @@
       "city": "Houmen",
       "company": "Buzzshare",
       "isActive": true,
-      "createdAt": "2019-04-25T21:19:48.815Z",
-      "updatedAt": "2019-04-25T21:19:48.815Z"
+      "createdAt": "2019-04-29T13:06:40.184Z",
+      "updatedAt": "2019-04-29T13:06:40.184Z"
     },
     {
       "id": 12,
@@ -43,28 +43,6 @@
       "isActive": true,
       "createdAt": "2019-04-25T21:31:48.673Z",
       "updatedAt": "2019-04-25T21:31:48.673Z"
-    },
-    {
-      "id": 15,
-      "name": "Charmain Fowleyz",
-      "email": "cfowley9@w3.org",
-      "phone": "264-379-2931",
-      "city": "Houmen",
-      "company": "Buzzshare",
-      "isActive": true,
-      "createdAt": "2019-04-25T21:48:08.793Z",
-      "updatedAt": "2019-04-25T21:48:08.793Z"
-    },
-    {
-      "id": 16,
-      "name": "test",
-      "email": "test@mail.com",
-      "phone": "",
-      "city": "",
-      "company": "",
-      "isActive": true,
-      "createdAt": "2019-04-25T22:32:52.236Z",
-      "updatedAt": "2019-04-25T22:32:52.236Z"
     }
   ]
 }
