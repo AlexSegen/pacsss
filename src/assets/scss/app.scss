@@ -13,30 +13,29 @@
 
 -----------------------------------------------------------------------*/
 
-
 //Global
-@import 'global/variables';
-@import 'bootstrap/bootstrap';
-@import 'global/core';
+@import "global/variables";
+@import "bootstrap/bootstrap";
+@import "global/core";
 
 //Helpers
-@import 'helpers/bg-colors';
-@import 'helpers/text-colors';
-@import 'helpers/spacing';
-@import 'helpers/typography';
-@import 'helpers/positions-displays';
+@import "helpers/bg-colors";
+@import "helpers/text-colors";
+@import "helpers/spacing";
+@import "helpers/typography";
+@import "helpers/positions-displays";
 
 //Elements
-@import 'elements/buttons';
+@import "elements/buttons";
 
 //Utils
-@import 'utils/animations';
+@import "utils/animations";
 
 //Layout
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
 
 //Pages
-@import 'pages/general';
-@import 'pages/home';
+@import "pages/general";
+@import "pages/home";
