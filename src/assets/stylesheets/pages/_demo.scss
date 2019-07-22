@@ -1,0 +1,90 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the demo page.
+// -----------------------------------------------------------------------------
+
+.intro {
+    /* max-width: 600px;
+    margin: 200px auto; */
+    text-align: center;
+    p:last-child {
+       font-size: 12px;
+    }
+ }
+ 
+
+/* helpers */
+.w-100 {
+   width: 100%;
+}
+
+main {
+   padding: 30px;
+}
+.example {
+   color: $gray-600;
+   padding: 30px 30px 15px;
+   border: 2px seashell solid;
+   margin-bottom: 30px;
+}
+.example [class^="col"] {
+   padding-top: calc(var(--grid-gutter-width) / 2);
+   padding-bottom: calc(var(--grid-gutter-width) / 2);
+   background: $gray-100;
+   border: 1px darken($gray-200, 10%) solid;
+}
+.example .row {
+   margin-bottom: 15px;
+}
+.example [class^="row align"] {
+   min-height: 10rem;
+   background: antiquewhite;
+}
+
+.pacsss_nav {
+   width: 100%;
+   
+   background: #f9f9f9;
+   > li {
+      display: inline-flex;
+      > a {
+         color: #333;
+         display: block;
+         padding: 10px 15px;
+         text-decoration: none;
+
+         &:hover,
+         &:focus {
+            color: #333;
+            background: #f1f1f1;
+         }
+      }
+   }
+}
+
+.pacsss_section {
+   display: none;
+
+   &.show {
+      display: block;
+   }
+
+   .btn {
+      margin-bottom: 5px;
+   }
+}
+
+
+.fade-in {
+   animation: fade-in .5s ease-in-out 0s forwards;
+}
+
+@keyframes fade-in {
+   0% {
+      transform: rotate(0);
+      opacity: 0;
+   }
+   100% {
+      transform: rotate(0);
+      opacity: 1;
+   }
+}

@@ -20,16 +20,16 @@ $body-background: #fff;
 //Main colors
 $brand-color: #3f51b5 !default;
 
-$blue: #007bff !default;
-$indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
+$blue: #2196F3 !default;
+$indigo: #3F51B5 !default;
+$purple: #9C27B0 !default;
 $pink: #e83e8c !default;
-$red: #dc3545 !default;
-$orange: #fd7e14 !default;
-$yellow: #ffc107 !default;
-$green: #28a745 !default;
-$teal: #20c997 !default;
-$cyan: #17a2b8 !default;
+$red: #F44336 !default;
+$orange: #FF5722 !default;
+$yellow: #FFEB3B !default;
+$green: #8BC34A !default;
+$teal: #009688 !default;
+$cyan: #00BCD4 !default;
 
 //Light to Dark Colors
 $white: #fff;
@@ -47,6 +47,7 @@ $black: #000;
 //Framework Colors
 $primary: $purple !default;
 $secondary: $gray-600 !default;
+$tertiary: $teal !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;

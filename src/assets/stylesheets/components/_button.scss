@@ -1,12 +1,483 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
-$radius: 2px;
+$is-radius: 2px;
 
 .btn {
-  border-radius: $radius;
+  border-radius: $is-radius;
+  border: 1px solid $gray-200;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: $text-font-stack;
+  font-size: $font-size;
+  padding: 8px 24px;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  transition: all ease-in-out .1s;
 
-  &.btn-blue {
+    &.is-hover,
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    &:disabled {
+        color: #fff;
+        background-color: transparent;
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 1;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+
+
+    &.is-default {
+      color: $gray-600;
+      border-color: $gray-200;
+      background-color: $gray-100;
+
+      &:focus {
+        box-shadow: 0 0 5px $gray-100;
+      }
+
+      &.is-outline {
+        color: $gray-600;
+      }
+    }
+
+    &.is-primary {
+      border-color: $primary;
+      background-color: $primary;
+
+    &:focus {
+      box-shadow: 0 0 5px $primary;
+    }
+    &.is-outline {
+      color: $primary;
+      border-color: $primary;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $primary;
+      }
+    }
+  }
+
+
+  &.is-secondary {
+      border-color: $secondary;
+      background-color: $secondary;
+
+      &:focus {
+        box-shadow: 0 0 5px $secondary;
+      }
+      &.is-outline {
+        color: $secondary;
+        border-color: $secondary;
+        &:hover {
+          opacity: 1;
+          color: #fff;
+          background-color: $secondary;
+        }
+      }
+  }
+  
+  
+  &.is-tertiary {
+      border-color: $tertiary;
+      background-color: $tertiary;
+
+      &:focus {
+        box-shadow: 0 0 5px $tertiary;
+      }
+      &.is-outline {
+        color: $tertiary;
+        border-color: $tertiary;
+        &:hover {
+          opacity: 1;
+          color: #fff;
+          background-color: $tertiary;
+        }
+      }
+  }
+
+
+  &.is-success {
+    border-color: $success;
+    background-color: $success;
+
+    &:focus {
+      box-shadow: 0 0 5px $success;
+    }
+    &.is-outline {
+      color: $success;
+      border-color: $success;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $success;
+      }
+    }
+  }
+
+  &.is-danger {
+    border-color: $danger;
+    background-color: $danger;
+
+    &:focus {
+      box-shadow: 0 0 5px $danger;
+    }
+    &.is-outline {
+      color: $danger;
+      border-color: $danger;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $danger;
+      }
+    }
+  }
+
+  &.is-info {
+    border-color: $info;
+    background-color: $info;
+
+    &:focus {
+      box-shadow: 0 0 5px $info;
+    }
+    &.is-outline {
+      color: $info;
+      border-color: $info;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $info;
+      }
+    }
+  }
+
+  &.is-warning {
+    border-color: $warning;
+    background-color: $warning;
+
+    &:focus {
+      box-shadow: 0 0 5px $warning;
+    }
+    &.is-outline {
+      color: $warning;
+      border-color: $warning;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $warning;
+      }
+    }
+  }
+
+
+  &.is-blue {
+    border-color: $blue;
+    background-color: $blue;
+
+    &:focus {
+      box-shadow: 0 0 5px $blue;
+    }
+    &.is-outline {
+      color: $blue;
+      border-color: $blue;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $blue;
+      }
+    }
+  }
+  &.is-indigo {
+    border-color: $indigo;
+    background-color: $indigo;
+
+    &:focus {
+      box-shadow: 0 0 5px $indigo;
+    }
+    &.is-outline {
+      color: $warning;
+      border-color: $warning;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $warning;
+      }
+    }
+  }
+  &.is-purple {
+    border-color: $purple;
+    background-color: $purple;
+
+    &:focus {
+      box-shadow: 0 0 5px $purple;
+    }
+    &.is-outline {
+      color: $purple;
+      border-color: $purple;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $purple;
+      }
+    }
+  }
+  &.is-pink {
+    border-color: $pink;
+    background-color: $pink;
+
+    &:focus {
+      box-shadow: 0 0 5px $pink;
+    }
+    &.is-outline {
+      color: $pink;
+      border-color: $pink;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $pink;
+      }
+    }
+  }
+  &.is-red {
+    border-color: $red;
+    background-color: $red;
+
+    &:focus {
+      box-shadow: 0 0 5px $red;
+    }
+    &.is-outline {
+      color: $red;
+      border-color: $red;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $red;
+      }
+    }
+  }
+  &.is-orange {
+    border-color: $orange;
+    background-color: $orange;
+
+    &:focus {
+      box-shadow: 0 0 5px $orange;
+    }
+    &.is-outline {
+      color: $orange;
+      border-color: $orange;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $orange;
+      }
+    }
+  }
+  &.is-yellow {
+    border-color: $yellow;
+    background-color: $yellow;
+
+    &:focus {
+      box-shadow: 0 0 5px $yellow;
+    }
+    &.is-outline {
+      color: $yellow;
+      border-color: $yellow;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $yellow;
+      }
+    }
+  }
+  &.is-green {
+    border-color: $green;
+    background-color: $green;
+
+    &:focus {
+      box-shadow: 0 0 5px $green;
+    }
+    &.is-outline {
+      color: $green;
+      border-color: $green;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $green;
+      }
+    }
+  }
+  &.is-teal {
+    border-color: $teal;
+    background-color: $teal;
+
+    &:focus {
+      box-shadow: 0 0 5px $teal;
+    }
+    &.is-outline {
+      color: $teal;
+      border-color: $teal;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $teal;
+      }
+    }
+  }
+  &.is-cyan {
+    border-color: $cyan;
+    background-color: $cyan;
+
+    &:focus {
+      box-shadow: 0 0 5px $cyan;
+    }
+    &.is-outline {
+      color: $cyan;
+      border-color: $cyan;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $cyan;
+      }
+    }
+  }
+
+  &.is-dark {
+    border-color: $black;
+    background-color: $black;
+
+    &:focus {
+      box-shadow: 0 0 5px $black;
+    }
+    &.is-outline {
+      color: $black;
+      border-color: $black;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $black;
+      }
+    }
+  }
+
+  &.is-gray {
+    border-color: $gray-500;
+    background-color: $gray-500;
+
+    &:focus {
+      box-shadow: 0 0 5px $gray-500;
+    }
+    &.is-outline {
+      color: $gray-500;
+      border-color: $gray-500;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $gray-500;
+      }
+    }
+  }
+
+  &.is-light {
+    color: $gray-600;
+    border-color: $gray-100;
+    background-color: $gray-100;
+
+    &:focus {
+      box-shadow: 0 0 5px $gray-100;
+    }
+    &.is-outline {
+      color: $gray-600;
+      border-color: $gray-100;
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $gray-100;
+      }
+    }
+  }
+
+
+  &.is-outline {
+    background: transparent;
+  }
+
+  &.is-pill {
+    border-radius: 25px!important;
+  }
+
+
+  &.is-large {
+    font-size: 16px;
+      padding: 12px 36px;
+  }
+
+  &.is-small {
+      font-size: 12px;
+      padding: 4px 12px;
+  }
+
+  &.is-block {
+    display: block;
+    width: 100%;
+  }
+  
+  
+   //button root
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .btn {
+  border-radius: $is-radius;
+
+  &.is-blue {
     color: #fff;
     background: $blue;
     border: 1px solid $blue;
@@ -20,7 +491,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-outline-blue {
+  &.is-outline-blue {
     color: $blue;
     background: transparent;
     border: 1px solid $blue;
@@ -34,7 +505,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-indigo {
+  &.is-indigo {
     color: #fff;
     background: $indigo;
     border: 1px solid $indigo;
@@ -48,7 +519,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-outline-indigo {
+  &.is-outline-indigo {
     color: $indigo;
     background: transparent;
     border: 1px solid $indigo;
@@ -62,7 +533,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-purple {
+  &.is-purple {
     color: #fff;
     background: $purple;
     border: 1px solid $purple;
@@ -76,7 +547,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-outline-purple {
+  &.is-outline-purple {
     color: $purple;
     background: transparent;
     border: 1px solid $purple;
@@ -90,7 +561,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-pink {
+  &.is-pink {
     color: #fff;
     background: $pink;
     border: 1px solid $pink;
@@ -104,7 +575,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-outline-pink {
+  &.is-outline-pink {
     color: $pink;
     background: transparent;
     border: 1px solid $pink;
@@ -118,7 +589,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-red {
+  &.is-red {
     color: #fff;
     background: $red;
     border: 1px solid $red;
@@ -132,7 +603,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-outline-red {
+  &.is-outline-red {
     color: $red;
     background: transparent;
     border: 1px solid $red;
@@ -146,7 +617,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-orange {
+  &.is-orange {
     color: #fff;
     background: $orange;
     border: 1px solid $orange;
@@ -160,7 +631,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-outline-orange {
+  &.is-outline-orange {
     color: $orange;
     background: transparent;
     border: 1px solid $orange;
@@ -174,7 +645,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-yellow {
+  &.is-yellow {
     color: #fff;
     background: $yellow;
     border: 1px solid $yellow;
@@ -188,7 +659,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-outline-yellow {
+  &.is-outline-yellow {
     color: $yellow;
     background: transparent;
     border: 1px solid $yellow;
@@ -202,7 +673,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-green {
+  &.is-green {
     color: #fff;
     background: $green;
     border: 1px solid $green;
@@ -216,7 +687,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-outline-green {
+  &.is-outline-green {
     color: $green;
     background: transparent;
     border: 1px solid $green;
@@ -230,7 +701,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-teal {
+  &.is-teal {
     color: #fff;
     background: $teal;
     border: 1px solid $teal;
@@ -244,7 +715,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-outline-teal {
+  &.is-outline-teal {
     color: $teal;
     background: transparent;
     border: 1px solid $teal;
@@ -258,7 +729,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-cyan {
+  &.is-cyan {
     color: #fff;
     background: $cyan;
     border: 1px solid $cyan;
@@ -272,7 +743,7 @@ $radius: 2px;
     }
   }
 
-  &.btn-outline-cyan {
+  &.is-outline-cyan {
     color: $cyan;
     background: transparent;
     border: 1px solid $cyan;
@@ -286,3 +757,4 @@ $radius: 2px;
     }
   }
 }
+ */

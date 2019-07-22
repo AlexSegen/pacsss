@@ -5,13 +5,14 @@
   'abstracts/variables',
   'abstracts/functions',
   'abstracts/animations',
-  'abstracts/mixins';
-
+  'abstracts/mixins',
+  'abstracts/helpers/bg-colors',
+  'abstracts/helpers/positions-displays',
+  'abstracts/helpers/spacing',
+  'abstracts/helpers/text-colors';
 // 2. Vendors
 @import
   'vendors/normalize';
-  @import
-  'vendors/bootstrap/bootstrap';
 
 // 3. Base stuff
 @import
@@ -23,7 +24,8 @@
 // 4. Layout-related sections
 @import
   'layout/header',
-  'layout/footer';
+  'layout/footer',
+  'layout/grids';
 
 // 5. Components
 @import
@@ -31,16 +33,9 @@
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/demo';
 
 // 7. Themes
 @import
   'themes/default';
-
-// 8. Helpers
-@import
-  'helpers/bg-colors',
-  'helpers/positions-displays',
-  'helpers/spacing',
-  'helpers/text-colors',
-  'helpers/typography';
