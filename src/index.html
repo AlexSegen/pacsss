@@ -17,13 +17,15 @@
           class="zmdi zmdi-layers text-primary"></i> Intro</a></li>
     <li><a href="javascript:void(0);" class="nav--action" data-action="buttons"><i
           class="zmdi zmdi-view-agenda text-primary"></i> Buttons</a></li>
+    <li><a href="javascript:void(0);" class="nav--action" data-action="forms"><i
+          class="zmdi zmdi-view-agenda text-primary"></i> Forms</a></li>
     <li><a href="javascript:void(0);" class="nav--action" data-action="grids"><i
           class="zmdi zmdi-grid text-primary"></i> Grid System</a></li>
   </nav>
 
   <main>
 
-    <section class="pacsss_section fade-in" id="intro" style="display: block">
+    <section class="pacsss_section fade-in" id="intro" style="display: none">
       <div class="container intro text-center">
         <img src="./assets/img/logo-pixelagil.png" class="img-fluid center-block mb-10" alt="Pixelagil">
         <h1>PACSSS: Pixelagil CSS Scaffolding</h1>
@@ -633,6 +635,113 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+
+    <section class="pacsss_section fade-in" id="forms" style="display: block">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Forms</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h4>Input & Textarea</h4>
+            <div class="input-field">
+              <input type="text" class="input" placeholder="Text input">
+            </div>
+
+            <div class="input-field">
+              <input type="text" class="input is-rounded" placeholder="Text rounded input">
+            </div>
+
+            <div class="input-field">
+              <textarea class="textarea" cols="40" placeholder="Text area" rows="3"></textarea>
+            </div>
+
+            <h4>Colors</h4>
+            <div class="input-field">
+              <div class="control">
+                <input class="input is-primary" type="text" placeholder="Primary input">
+              </div>
+            </div>
+            <div class="input-field">
+              <div class="control">
+                <input class="input is-info" type="text" placeholder="Info input">
+              </div>
+            </div>
+            <div class="input-field">
+              <div class="control">
+                <input class="input is-success" type="text" placeholder="Success input">
+              </div>
+            </div>
+            <div class="input-field">
+              <div class="control">
+                <input class="input is-warning" type="text" placeholder="Warning input">
+              </div>
+            </div>
+            <div class="input-field">
+              <div class="control">
+                <input class="input is-danger" type="text" placeholder="Danger input">
+              </div>
+            </div>
+
+            <h4>Sizes</h4>
+
+            <div class="input-field">
+              <div class="control">
+                <input class="input is-small" type="text" placeholder="Small input">
+              </div>
+            </div>
+            <div class="input-field">
+              <div class="control">
+                <input class="input" type="text" placeholder="Normal input">
+              </div>
+            </div>
+            <div class="input-field">
+              <div class="control">
+                <input class="input is-large" type="text" placeholder="Large input">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <h4>States</h4>
+            <div class="input-field is-loading">
+              <input type="text" class="input" placeholder="Text input">
+            </div>
+            <div class="input-field is-loading is-small">
+              <input type="text" class="input is-small" placeholder="Text input">
+            </div>
+            <div class="input-field is-loading is-large">
+              <input type="text" class="input is-large" placeholder="Text input">
+            </div>
+          </div>
+          <div class="col">
+            <h4>Examples</h4>
+            <form action="">
+              <div class="input-field">
+                <input type="text" class="input" placeholder="Full name">
+              </div>
+              <div class="input-field">
+                <input type="email" class="input" placeholder="Email">
+              </div>
+              <div class="input-field">
+                <select name="" id="" class="select">
+                  <option value="0">Select your plan</option>
+                  <option value="1">Free Limited Plan</option>
+                  <option value="2">Basic Plan</option>
+                  <option value="3">Advanced Plan</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <textarea class="textarea" id="" cols="30" rows="4" placeholder="Describe yourself"></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+
       </div>
     </section>
 
