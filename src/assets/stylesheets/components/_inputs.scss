@@ -99,6 +99,12 @@
     -webkit-appearance: caret!important;
 }
 
+.input-help {
+    color: $gray-600;
+    font-size: .7rem;
+    padding-left: 5px;
+}
+
 .input,
 .select,
 .textarea {

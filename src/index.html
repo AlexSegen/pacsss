@@ -722,10 +722,12 @@
             <h4>Examples</h4>
             <form action="">
               <div class="input-field">
-                <input type="text" class="input" placeholder="Full name">
+                <input type="text" class="input is-danger" placeholder="Full name">
+                <span class="input-help text-danger">Your name is required.</span>
               </div>
               <div class="input-field">
-                <input type="email" class="input" placeholder="Email">
+                <input type="email" class="input is-success" placeholder="Email" value="user@example.com">
+                <span class="input-help text-success">Email is valid.</span>
               </div>
               <div class="input-field">
                 <select name="" id="" class="select">
@@ -737,6 +739,7 @@
               </div>
               <div class="input-field">
                 <textarea class="textarea" id="" cols="30" rows="4" placeholder="Describe yourself"></textarea>
+                <span class="input-help">Shortly, describe yourself.</span>
               </div>
               <div class="input-field">
                 <button type="button" class="btn is-primary">Subscribe</button>
