@@ -1,4 +1,4 @@
-import '../scss/app.scss'
+import '../stylesheets/main.scss'
 
 function init(name) {
   console.log(`hello ${name}!`);
