@@ -15,6 +15,7 @@ $is-radius: 2px;
   text-align: center;
   vertical-align: middle;
   transition: all ease-in-out .1s;
+  position: relative;
 
     &.is-hover,
     &:hover {
@@ -69,6 +70,11 @@ $is-radius: 2px;
         color: #fff;
         background-color: $primary;
       }
+      &.is-loading { 
+        &:after { 
+            border-color:$primary;
+        }
+      }
     }
   }
 
@@ -87,6 +93,11 @@ $is-radius: 2px;
           opacity: 1;
           color: #fff;
           background-color: $secondary;
+        }
+        &.is-loading { 
+          &:after { 
+              border-color:$secondary;
+          }
         }
       }
   }
@@ -107,6 +118,11 @@ $is-radius: 2px;
           color: #fff;
           background-color: $tertiary;
         }
+        &.is-loading { 
+          &:after { 
+              border-color:$tertiary;
+          }
+        }
       }
   }
 
@@ -126,6 +142,11 @@ $is-radius: 2px;
         color: #fff;
         background-color: $success;
       }
+      &.is-loading {
+        &:after { 
+            border-color:$success;
+        }
+      }
     }
   }
 
@@ -143,6 +164,11 @@ $is-radius: 2px;
         opacity: 1;
         color: #fff;
         background-color: $danger;
+      }
+      &.is-loading {
+        &:after { 
+            border-color:$danger;
+        }
       }
     }
   }
@@ -162,6 +188,11 @@ $is-radius: 2px;
         color: #fff;
         background-color: $info;
       }
+      &.is-loading {
+        &:after { 
+          border-color:$info;
+        }
+      }
     }
   }
 
@@ -179,6 +210,11 @@ $is-radius: 2px;
         opacity: 1;
         color: #fff;
         background-color: $warning;
+      }
+      &.is-loading {
+        &:after { 
+            border-color:$warning;
+        }
       }
     }
   }
@@ -199,6 +235,11 @@ $is-radius: 2px;
         color: #fff;
         background-color: $blue;
       }
+      &.is-loading {
+        &:after { 
+            border-color:$blue;
+        }
+      }
     }
   }
   &.is-indigo {
@@ -215,6 +256,11 @@ $is-radius: 2px;
         opacity: 1;
         color: #fff;
         background-color: $warning;
+      }
+      &.is-loading {
+        &:after { 
+            border-color:$warning;
+        }
       }
     }
   }
@@ -233,6 +279,11 @@ $is-radius: 2px;
         color: #fff;
         background-color: $purple;
       }
+      &.is-loading {
+        &:after { 
+            border-color:$purple;
+        }
+      }
     }
   }
   &.is-pink {
@@ -249,6 +300,11 @@ $is-radius: 2px;
         opacity: 1;
         color: #fff;
         background-color: $pink;
+      }
+      &.is-loading {
+        &:after { 
+            border-color:$pink;
+        }
       }
     }
   }
@@ -267,6 +323,11 @@ $is-radius: 2px;
         color: #fff;
         background-color: $red;
       }
+      &.is-loading {
+        &:after { 
+            border-color:$red;
+        }
+      }
     }
   }
   &.is-orange {
@@ -283,6 +344,11 @@ $is-radius: 2px;
         opacity: 1;
         color: #fff;
         background-color: $orange;
+      }
+      &.is-loading {
+        &:after { 
+            border-color:$orange;
+        }
       }
     }
   }
@@ -301,6 +367,11 @@ $is-radius: 2px;
         color: #fff;
         background-color: $yellow;
       }
+      &.is-loading {
+        &:after { 
+            border-color:$yellow;
+        }
+      }
     }
   }
   &.is-green {
@@ -317,6 +388,11 @@ $is-radius: 2px;
         opacity: 1;
         color: #fff;
         background-color: $green;
+      }
+      &.is-loading {
+        &:after { 
+            border-color:$green;
+        }
       }
     }
   }
@@ -335,6 +411,11 @@ $is-radius: 2px;
         color: #fff;
         background-color: $teal;
       }
+      &.is-loading {
+        &:after { 
+            border-color:$teal;
+        }
+      }
     }
   }
   &.is-cyan {
@@ -351,6 +432,11 @@ $is-radius: 2px;
         opacity: 1;
         color: #fff;
         background-color: $cyan;
+      }
+      &.is-loading {
+        &:after { 
+            border-color:$cyan;
+        }
       }
     }
   }
@@ -370,6 +456,11 @@ $is-radius: 2px;
         color: #fff;
         background-color: $black;
       }
+      &.is-loading {
+        &:after { 
+            border-color:$black;
+        }
+      }
     }
   }
 
@@ -387,6 +478,11 @@ $is-radius: 2px;
         opacity: 1;
         color: #fff;
         background-color: $gray-500;
+      }
+      &.is-loading {
+        &:after { 
+            border-color:$gray-500;
+        }
       }
     }
   }
@@ -406,6 +502,11 @@ $is-radius: 2px;
         opacity: 1;
         color: #fff;
         background-color: $gray-100;
+      }
+      &.is-loading {
+        &:after { 
+            border-color:$gray-100;
+        }
       }
     }
   }
@@ -433,6 +534,40 @@ $is-radius: 2px;
   &.is-block {
     display: block;
     width: 100%;
+  }
+
+  &.is-link {
+    color: $brand-color;
+    background: transparent;
+    border-color: transparent;
+  }
+
+  &.is-loading {
+    color: transparent!important;
+    pointer-events: none;
+      &.is-link {
+        &:after {
+          border-color: $primary;
+        }
+      }
+    &:after {
+        animation: zmdi-spin 0.5s infinite linear;
+        border: 2px solid #fff;
+        border-radius: 100%;
+        border-right-color: transparent!important;
+        border-top-color: transparent!important;
+        content: "";
+        display: block;
+        height: 1em;
+        position: relative;
+        width: 1em;
+    }
+    &:after {
+      position: absolute;
+      left: calc(50% - (1em / 2));
+      top: calc(50% - (1em / 2));
+      position: absolute!important;
+    } 
   }
   
   
