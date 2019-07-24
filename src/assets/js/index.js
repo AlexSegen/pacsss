@@ -1,7 +1,23 @@
+import 'pageable/dist/pageable.min.css'
 import '../stylesheets/main.scss'
 
-function init(name) {
-  console.log(`hello ${name}!`);
-}
+const Pageable = require('pageable')
 
-init('world');
+const WOW = require('wow.js')
+
+$(document).ready(() => {
+
+
+  //new Pageable("#container");
+
+  const wow = new WOW({
+    boxClass: 'wow', // default
+    animateClass: 'sr--anim', // default
+    offset: 150, // default
+    mobile: true, // default
+    live: true // default
+  })
+
+  wow.init();
+
+});

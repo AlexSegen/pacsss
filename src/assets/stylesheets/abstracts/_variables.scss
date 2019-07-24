@@ -3,28 +3,28 @@
 // -----------------------------------------------------------------------------
 
 //Import Font Family
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
-
+//@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,800&display=swap');
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
-$text-header-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: 'Montserrat', sans-serif !default;
+$text-header-stack: 'Montserrat', sans-serif !default;
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 //Body properties
 
 $font-size: 14px;
-$text-color: #4f637e;
+$text-color: #222222;
 $body-background: #fff;
 
 //Main colors
-$brand-color: #3f51b5 !default;
+$brand-color: #ffc107 !default;
 
 $blue: #007bff !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
-$pink: #e83e8c !default;
-$red: #dc3545 !default;
+$pink: #ff07ff !default;
+$red: #ff0753 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
 $green: #28a745 !default;
@@ -45,7 +45,7 @@ $gray-900: #212529;
 $black: #000;
 
 //Framework Colors
-$primary: $purple !default;
+$primary: $yellow !default;
 $secondary: $gray-600 !default;
 $success: $green !default;
 $info: $cyan !default;

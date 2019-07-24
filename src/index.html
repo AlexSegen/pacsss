@@ -11,13 +11,128 @@
 
 <body>
 
-  <div class="intro text-center">
-    <img src="./assets/img/logo-pixelagil.png" class="img-fluid center-block mb-10" alt="Pixelagil">
-    <h1>PACSSS: Pixelagil CSS Scaffolding</h1>
-    <p>You are seeing this thanks to <a href="https://parceljs.org/" target="_blank">Parcel bundler</a>.</p>
-    <p>My website: <a href="https://www.pixelagil.com/" target="_blank">Pixelagil.com</a></p>
+  <nav class="sr_navbar">
+    <li class="sr--anim wow slide-in-right" data-wow-delay="0s"><a href="#top">Home</a></li>
+    <li class="sr--anim wow slide-in-right" data-wow-delay=".2s"><a href="#about">About</a></li>
+    <li class="sr--anim wow slide-in-right" data-wow-delay=".4s"><a href="#features">Features</a></li>
+    <li class="sr--anim wow slide-in-right" data-wow-delay=".6s"><a href="#goals">Goals</a></li>
+    <li class="sr--anim wow slide-in-right" data-wow-delay=".8s"><a href="#demo">Demo</a></li>
+  </nav>
+
+
+  <div class="sr_wrapper" id="container">
+
+    <section class="sr_section" id="top" data-anchor="top">
+      <div class="sr_hero vh100">
+        <div class="sr_hero--overlay"></div>
+        <div class="sr_hero--content">
+          <img class="sr_hero--splash sr--anim wow scale-in-center" src="/assets/img/hero-car.png" alt="">
+          <h1 class="sr_hero--title sr--anim wow scale-in-center"><span>Show</span>Room</h1>
+          <p class="sr_hero--description sr--anim wow scale-in-center">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Est amet eveniet sit
+            impedit, nemo iste rem. Enim atque nesciunt ratione officia, tempora quibusdam sequi hic illum, doloremque
+            laboriosam vel eum.</p>
+          <a href="javascript:void(0);"
+            class="btn btn-primary btn-shadow btn-lg pr-5 pl-5sr--anim wow scale-in-center">VIEW DEMO</a>
+        </div>
+      </div>
+      </secti>
+
+      <section class="sr_section" id="about" data-anchor="about">
+        <div class="container vh-100 flex-justify-center sr_section--pading">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="sr_section--content text-justify sr--anim wow fade-in">
+                <h2 class="sr_section--title sr--anim wow tracking-in-contract" data-wow-delay=".5s">About</h2>
+                <div class="sr_divider --brand "></div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, culpa. Ducimus neque quis nobis
+                  fuga, unde temporibus ipsam <strong>molestias</strong> officia, quod enim labore laborum repellendus
+                  quas eius iste
+                  ratione rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium consequuntur soluta
+                  deleniti cum vero esse repudiandae, libero impedit <strong>odio quas non eum architecto</strong> aut
+                  error magnam
+                  placeat. Cupiditate, autem vel.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, minima sapiente quis ipsum voluptas
+                  rerum quidem, <strong>perferendis ab itaque maxime</strong> unde provident quam voluptatum fugiat.
+                  Ducimus quia rerum
+                  odio reiciendis.</p>
+
+                <div class="sr_content--footer">
+                  <a href="#features" class="btn btn-primary pr-5 pl-5 mt-3">Continue</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="sr_section--content  sr--anim wow fade-in">
+                <figure class="sr_figure">
+                  <img src="http://placehold.it/800x600" class="img-fluid d-block b-radius-5 shadow" alt="">
+                  <div class="sr_figure--caption">(Descripción de la foto)</div>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="sr_section" id="features" data-anchor="features">
+        <div class="container vh-100 flex-justify-center sr_section--pading">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="sr_section--content  sr--anim wow fade-in">
+                <figure class="sr_figure">
+                  <img src="http://placehold.it/800x600" class="img-fluid d-block b-radius-5 shadow" alt="">
+                  <div class="sr_figure--caption">(Descripción de la foto)</div>
+                </figure>
+
+                <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, minima sapiente
+                  quis ipsum voluptas
+                  rerum quidem, <strong>perferendis ab itaque maxime</strong> unde provident quam voluptatum fugiat.
+                  Ducimus quia rerum
+                  odio reiciendis.</p>
+
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="sr_section--content text-justify sr--anim wow fade-in">
+                <h2 class="sr_section--title sr--anim wow tracking-in-contract" data-wow-delay=".5s">Features</h2>
+                <div class="sr_divider --brand "></div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, culpa. Ducimus neque quis nobis
+                  fuga, unde temporibus ipsam <strong>molestias</strong> officia, quod enim labore laborum repellendus
+                  quas eius iste.</p>
+
+
+                <ul class="sr_features--figures my-5">
+                  <li class="active"><img src="http://placehold.it/300x300" class="shadow sr--anim wow fade-in"
+                      data-wow-delay="0s" alt="">
+                    <span>Titulo</span></li>
+                  <li><img src="http://placehold.it/300x300" class="shadow sr--anim wow fade-in" data-wow-delay=".2s">
+                    <span>Titulo</span></li>
+                  <li><img src="http://placehold.it/300x300" class="shadow sr--anim wow fade-in" data-wow-delay=".4s">
+                    <span>Titulo</span> </li>
+                  <li><img src="http://placehold.it/300x300" class="shadow sr--anim wow fade-in" data-wow-delay=".6s">
+                    <span>Titulo</span></li>
+                </ul>
+
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, culpa. Ducimus neque quis nobis
+                  fuga, unde temporibus ipsam <strong>molestias</strong> officia, quod enim labore laborum repellendus
+                  quas eius iste.</p>
+
+                <div class="sr_content--footer">
+                  <a href="#features" class="btn btn-primary pr-5 pl-5 mt-3">Continue</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
   </div>
 
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="./assets/js/index.js"></script>
 </body>
 
