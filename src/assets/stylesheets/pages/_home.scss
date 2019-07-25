@@ -2,60 +2,53 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-
-
-
-.sr_section {
-    width: 100%;
-}
-
-.sr_wrapper {
-    width: 100%!important;
-}
-
 .sr_hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #111111, #000000); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #111111,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: rgba(#000, 1);
+  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
+
+  .sr_hero--splash {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .sr_hero--content {
+    color: #fff;
+    text-align: center;
     position: relative;
-    background: #000000;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #111111, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #111111, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-color:rgba(#000, 1);
-    background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
-
-    .sr_hero--splash {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+    max-width: 800px;
+    margin: 0 auto;
+    .sr_hero--title {
+      font-size: 8rem;
+      line-height: 7rem;
+      font-weight: 600;
+      margin: 0 0 0 0;
+      letter-spacing: -5px;
+      span {
+        font-weight: 200;
+      }
     }
 
-    .sr_hero--content {
-        color: #fff;
-        text-align: center;
-        position: relative;
-        max-width: 800px;
-        margin: 0 auto;
-        .sr_hero--title {
-            font-size: 8rem;
-            line-height: 7rem;
-            font-weight: 600;
-            margin: 0 0 0 0;
-            letter-spacing: -5px;
-            span {
-                font-weight: 200;
-            }
-        }
-
-        .sr_hero--description {
-            margin-top: 10px;
-            font-weight: 200;
-        }
-
+    .sr_hero--description {
+      margin-top: 10px;
+      font-weight: 200;
+      padding: 0 15px;
     }
+  }
 
-   /*  .sr_hero--overlay {
+  /*  .sr_hero--overlay {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -63,65 +56,86 @@
         background-color:rgba(#000, .5);
         background-image: url("https://www.transparenttextures.com/patterns/brilliant.png")
     } */
+
+  @media (max-width: 767px) {
+    .sr_hero--content {
+      .sr_hero--title {
+        font-size: 5rem;
+        line-height: 5rem;
+      }
+    }
+  }
+
+  @media (max-width: 460px) {
+    .sr_hero--content {
+      .sr_hero--title {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    padding-top: 55px;
+  }
 }
 
 .sr_figure {
+  text-align: center;
+  .sr_figure--caption {
+    font-size: 0.8rem;
     text-align: center;
-    .sr_figure--caption {
-        font-size: .8rem;
-        text-align: center;
-        margin: 10px 0 0;
-        opacity: .5;
-    }
+    margin: 10px 0 0;
+    opacity: 0.5;
+  }
 }
 
-
 .sr_features--figures {
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    > li {
-        display: inline-block;
-        margin-right: 5px;
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &:hover,
-        &:focus {
-             img {
-                 transform: translateY(-3px);
-                box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2) !important;
-             }
-        }
-
-        &.active {
-            img {
-                transform: translateY(-3px);
-               box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2) !important;
-            }
-
-            span {
-                color: #222;
-                font-weight: 600;
-            }
-        }
-
-        img {
-            cursor: pointer;
-            width: 100px;
-            height: 100px;
-            display: block;
-            margin: 0 auto;
-            border-radius: 50%;
-            transition: all ease-in-out .2s;
-        }
-
-        span {
-
-            margin-top: 5px;
-            display: block;
-        }
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  > li {
+    display: inline-block;
+    margin-right: 5px;
+    &:last-child {
+      margin-right: 0;
     }
+
+    &:hover,
+    &:focus {
+      img {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 1rem rgba($primary, 0.05) !important;
+      }
+    }
+
+    &.active {
+      img {
+        transform: translateY(-3px);
+        border: 2px solid $primary;
+        box-shadow: 0 1rem 1rem rgba($primary, 0.05) !important;
+      }
+
+      span {
+        color: $primary;
+        font-weight: 600;
+      }
+    }
+
+    img {
+      cursor: pointer;
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+      transition: all ease-in-out 0.2s;
+    }
+
+    span {
+      margin-top: 5px;
+      display: block;
+    }
+  }
 }

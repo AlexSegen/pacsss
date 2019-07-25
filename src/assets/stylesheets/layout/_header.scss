@@ -2,38 +2,200 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
-
 .sr_navbar {
-    position: fixed;
-    top: calc(50% - 180px);
-    z-index: 2;
-    right: 15px;
-    list-style: none;
-    text-align: right;
+  position: fixed;
+  top: calc(50% - 180px);
+  z-index: 2;
+  right: 15px;
+  list-style: none;
+  text-align: right;
 
-    > li {
-        margin-bottom: 30px;
-        > a {
-            color: $brand-color;
-            font-weight: 600;
-            text-decoration: none;
-            position: relative;
-            transition: all ease-in-out .1s;
+  > li {
+    margin-bottom: 30px;
+    > a {
+      color: $brand-color;
+      font-weight: 600;
+      text-decoration: none;
+      position: relative;
+      transition: all ease-in-out 0.1s;
 
-            &:hover,
-            &:focus {
-                color: $brand-color;
-                
-                &:before {
-                    content: "-";
-                    color: #333;
-                    position: absolute;
-                    left: -10px;
-                    top: 0;
-                }
-            }
+      &:hover,
+      &:focus {
+        color: $brand-color;
 
-            
+        &:before {
+          content: "-";
+          color: #333;
+          position: absolute;
+          left: -10px;
+          top: 0;
         }
+      }
     }
+  }
+}
+
+/* body.navbar-open {
+  overflow: hidden;
+} */
+
+.sr__navbar {
+  width: 100%;
+  height: 55px;
+  border-radius: 0;
+  position: relative;
+  background: #111111;
+  border: 1px solid #222;
+  z-index: 10;
+  border-bottom: 1px solid #222;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .nav-toggle {
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    font-weight: normal;
+    text-align: center;
+    background: $primary;
+    background-color: $primary;
+    box-shadow: none;
+    border: 1px solid #222;
+    padding: 12px 10px 12px 10px;
+    display: none;
+    cursor: pointer;
+    &:before {
+      content: "Menu";
+      text-transform: uppercase;
+      position: relative;
+      font: normal normal normal 10px/1 Helvetica;
+    }
+    span {
+      border-bottom: 1px solid #222;
+      display: block;
+      margin-bottom: 3px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &.active {
+      background: $brand-color;
+      background-color: $brand-color;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .container {
+      width: 95%;
+    }
+  }
+
+  .nav-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .nav-brand {
+      float: left;
+      height: auto;
+      max-width: 180px;
+      padding: 4px 5px;
+      overflow: hidden;
+      a {
+        display: block;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+    .nav-menu {
+      float: right;
+      text-align: right;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      > li {
+        display: inline-block;
+        margin: 0 5px;
+        > a {
+          color: #eeeeee;
+          font-size: 14px;
+          font-weight: 600;
+          display: block;
+          white-space: nowrap;
+          padding: 15px 5px;
+          text-decoration: none;
+          position: relative;
+          transition: all ease-in-out 0.1s;
+          &:hover,
+          &:focus,
+          &.active {
+            color: $primary;
+            text-decoration: none;
+
+            &:before {
+              content: "";
+              width: 8px;
+              color: #737373;
+              left: -6px;
+              top: 50%;
+              position: absolute;
+              border-bottom: 2px solid rgba($red, 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .sr__navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    .nav-toggle {
+      float: right;
+      display: inline-block;
+    }
+
+    .container {
+      width: 100%;
+      padding: 0;
+    }
+
+    .nav-content {
+      display: block;
+
+      .nav-menu {
+        width: 0;
+        padding: 55px 0;
+        background: #111111;
+        text-align: right;
+        min-height: 100vh;
+        position: fixed;
+        overflow: hidden;
+        right: 0;
+        top: 55px;
+        transition: all ease-in-out 0.2s;
+        &.open {
+          width: 200px;
+        }
+
+        > li {
+          display: block;
+          > a {
+            display: block;
+          }
+        }
+      }
+    }
+  }
 }
